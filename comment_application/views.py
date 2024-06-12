@@ -1,3 +1,4 @@
+from django.db.models import QuerySet
 from rest_framework import generics, filters
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
@@ -20,7 +21,7 @@ class CommentListCreate(generics.ListCreateAPIView):
     pagination_class = OrderPagination
     permission_classes = (IsAuthenticated,)
 
-    def get_queryset(self):
+    def get_queryset(self) -> QuerySet:
         return Comment.objects.filter(parent__isnull=True)
 
 
