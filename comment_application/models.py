@@ -7,11 +7,7 @@ class Comment(models.Model):
     home_page = models.URLField(blank=True, null=True)
     text = models.TextField()
     parent = models.ForeignKey(
-        'self',
-        null=True,
-        blank=True,
-        on_delete=models.CASCADE,
-        related_name="replies"
+        "self", null=True, blank=True, on_delete=models.CASCADE, related_name="replies"
     )
     created_at = models.DateTimeField(auto_now_add=True)
 

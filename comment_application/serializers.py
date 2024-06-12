@@ -8,8 +8,14 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = [
-            'id', 'username', 'email', 'home_page',
-            'text', 'parent', 'created_at', 'replies'
+            "id",
+            "username",
+            "email",
+            "home_page",
+            "text",
+            "parent",
+            "created_at",
+            "replies",
         ]
 
     def get_replies(self, obj) -> dict | None:
