@@ -41,3 +41,13 @@ For detailed API documentation:
 
 - Redoc: http://127.0.0.1:8000/api/doc/redoc/
 - Swagger UI: http://127.0.0.1:8000/api/doc/swagger/
+
+### Ordering
+You can use the built-in DRF/Swagger interface.
+Or write in the url additionally:
+- /?ordering=-username
+- /?ordering=username
+- /?ordering=-email
+- /?ordering=email
+- /?ordering=-created_at
+- /?ordering=created_at
